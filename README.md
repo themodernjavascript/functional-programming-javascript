@@ -57,6 +57,8 @@ const getSalutation = function(hour) {
   
   return salutation; // mutated value
 }
+
+console.log(getSalutation(10)); // Good Morning
 ```
 
 Expression
