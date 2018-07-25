@@ -234,6 +234,8 @@ let drinkTotal = cart.filter(x=> x.name === "Drink")
 console.log(`Total Drink Cost $${drinkTotal}`); // Total Drink Cost $14.13
 ```
 
+<a href="https://codepen.io/Bunlong/pen/yqXbXQ" target="_blank">Edit on Codepen</a>
+
 ## Pipelines
 
 A pipeline allows for easy function composition when performing multiple operations on a variable. Since JavaScript lacks a Pipeline operator, a design pattern can be used to accomplish the task.
@@ -245,11 +247,17 @@ const pipe = functions => data => {
     data
   );
 };
+
 let cart = [3.12, 45.15, 11.01];
 const addSalesTax = (total, taxRate) => (total * taxRate) + total;
+
 const tally = orders => pipe([
   x => x.reduce((total, val) => total + val), // sum the order
   x => addSalesTax(x, 0.09),
   x => `Order Total = ${x.toFixed(2)}` // convert to text
-])(orders); // Order Total = 64.62
+])(orders);
+
+console.log(tally(cart)); // Order Total = 64.62
 ```
+
+<a href="https://codepen.io/Bunlong/pen/qyjmPO" target="_blank">Edit on Codepen</a>
