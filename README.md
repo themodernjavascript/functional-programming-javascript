@@ -32,8 +32,10 @@ For example:
 ```javascript
 const isZero = n => n === 0;
 const a = [0,1,0,3,4,0];
-console.log(a.filter(isZero).length); // 3
+console.log(a.filter(isZero)); // [0, 0, 0]
 ```
+
+<a href="https://codepen.io/Bunlong/pen/zLzNbd" target="_blank">Edit on Codepen</a>
 
 ## Expressions Instead of Statements
 
