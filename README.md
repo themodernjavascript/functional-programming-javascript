@@ -21,6 +21,8 @@ const multiply = (x, y) => x * y;
 console.log(multiply(5,10)) //50
 ```
 
+<a href="https://codepen.io/Bunlong/pen/QBgdJb" target="_blank">Edit on Codepen</a>
+
 ## Function Delegates
 
 Function delegates encapsulate a method allowing functions to be composed or passed as data.
