@@ -12,9 +12,11 @@ For example:
 // const multiply = function(x,y) {
 //   return x * y;
 // }
+
 // Can be rewritten as:
 // const multiply = (x, y) => { return x * y };
-// Since the function is a single expression return and braces are not needed.
+
+// Since the function is a single expression return and braces are not needed:
 const multiply = (x, y) => x * y;
 console.log(multiply(5,10)) //50
 ```
