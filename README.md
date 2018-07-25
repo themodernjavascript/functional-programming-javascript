@@ -113,3 +113,87 @@ const weightsInPounds = [5, 15.4, 9.8, 110];
 // with currying
 const weightsInKg = weightsInPounds.map(poundsToKg); // 2.27kg, 7.00kg, 4.46kg, 50.01kg
 ```
+
+## Array Manipulation Functions
+
+Array Functions are the gateway to functional programming in JavaScript. These functions make short work of most imperative programming routines that work on arrays and collections.
+
+***[].every(fn)***
+
+Checks if all elements in an array pass a test.
+
+***[].some(fn) | [].includes(fn)***
+
+Checks if any of the elements in an array pass a test.
+
+***[].find(fn)***
+
+Returns the value of the first element in the array that passes a test.
+
+***[].filter(fn)***
+
+Creates an array filled with only the array elements that pass a test.
+
+***[].map(fn)***
+
+Creates a new array with the results of a function applied to every element in the array.
+
+***[].reduce(fn(accumulator, currentValue))***
+
+Executes a provided function for each value of the array (from left-to-right). Returns a single value, the accumulator.
+
+***[].sort(fn(a,b))*** warning, mutates state!
+
+Modifies an array by sorting the items within an array. An optional compare function can be used to customize sort behavior. Use the spread operator to avoid mutation. [...arr].sort()
+
+***[].reverse()*** warning, mutates state!
+
+Reverses the order of the elements in an array. Use the spread operator to avoid mutation. [...arr] . reverse()
+
+For example:
+
+```javascript
+const names = [
+  {text: "Alpha", value: 5}, 
+  {text: "Beta", value: 2}, 
+  {text: "Gamma", value: 4},
+];
+
+//Checks if all elements in an array pass a test.
+let everyResult = names.every(x => x.value > 0); //true
+
+// Checks if any of the elements in an array pass a test.
+let someResult = names.some(x => x.text === "Alpha"); //true
+
+// Returns the value of the first element in the array that passes a test.
+let findResult = names.find(x => x.text === "Gamma"); //{text: "Gamma", value: 4}
+
+// Creates an array filled with only the array elements that pass a test.
+let filterResult = names.filter(x => x.value > 3); //[{text: "Alpha", value: 5}, {text: "Gamma", value: 4}]
+
+// Creates a new array with the results of a function applied to every element in the array.
+let mapResult = names.map(x => ({...x, value: x.value *10}));
+//[{text: "Alpha", value: 50}, {text: "Beta", value: 20}, {text: "Gamma", value: 40}];
+
+// Executes a provided function for each value of the array (from left-to-right). The returns a single value, the accumulator.
+let reduceResult = names.reduce((accumulator, currentValue) =>  currentValue.value > accumulator.value ? currentValue : accumulator);
+// Get the largest object by value: {"text":"Alpha","value":5}
+
+// Modifies an array by sorting the items within an array. An optional compare function can be used to customize sort behavior. Use the spread operator to avoid mutation. [...arr].sort()
+let sortResult = [...names].sort((a,b) => b.value - a.value);
+
+// reverses the order of the elements in an array. Use the spread operator to avoid mutation. [...arr].reverse()
+let reverseResult = [...names].reverse();
+
+// Results
+const appDiv = document.getElementById('app');
+appDiv.innerHTML = `
+<p>every: ${everyResult}</p>
+<p>some: ${someResult}</p>
+<p>find: ${JSON.stringify(findResult)}</p>
+<p>filter: ${JSON.stringify(filterResult)}</p>
+<p>map: ${JSON.stringify(mapResult)}</p>
+<p>reduce: ${JSON.stringify(reduceResult)}</p>
+<p>reverse: ${JSON.stringify(reverseResult)}</p>
+<p>sort: ${JSON.stringify(sortResult)}</p>`;
+```
