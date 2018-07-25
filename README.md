@@ -69,3 +69,27 @@ console.log(getSalutation(10)); // Good Morning
 ```
 
 <a href="https://codepen.io/Bunlong/pen/mjwWeY" target="_blank">Edit on Codepen</a>
+
+## Higher Order Functions
+
+A function that accepts another function as a parameter, or returns another function.
+
+For example:
+
+```javascript
+function mapConsecutive(values, fn) {
+  let result = [];
+  
+  for(let i=0; i < values.length -1; i++) {
+    result.push(fn(values[i], values[i+1]));
+  }
+  
+  return result;
+}
+
+const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+let twoByTwo = mapConsecutive(letters, (x, y) => [x, y]);
+console.log(twoByTwo); // [[a, b], [b, c], [c, d], [d, e], [e, f], [f, g]]
+```
+
+<a href="https://codepen.io/Bunlong/pen/JBJWRa" target="_blank">Edit on Codepen</a>
