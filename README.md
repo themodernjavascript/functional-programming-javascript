@@ -21,3 +21,13 @@ needed.
 const multiply = (x, y) => x * y;
 console.log(multiply(5,10)) //50
 ```
+
+## Function Delegates
+
+Function delegates encapsulate a method allowing functions to be composed or passed as data.
+
+```javascript
+const isZero = n => n === 0;
+const a = [0,1,0,3,4,0];
+console.log(a.filter(isZero).length); // 3
+```
