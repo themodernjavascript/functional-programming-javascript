@@ -31,7 +31,7 @@ For example:
 
 ```javascript
 const isZero = n => n === 0;
-const a = [0,1,0,3,4,0];
+const a = [0, 1, 0, 3, 4, 0];
 console.log(a.filter(isZero)); // [0, 0, 0]
 ```
 
