@@ -221,17 +221,17 @@ For example:
 
 ```javascript
 let cart = [
-  {name: "Drink", price: 3.12},
-  {name: "Steak", price: 45.15},
-  {name: "Drink", price: 11.01}
+  { name: "Drink", price: 3.12 }, 
+  { name: "Steak", price: 45.15}, 
+  { name: "Drink", price: 11.01}
 ];
 
-let DrinkTotal = cart.filter(x => x.name === "Drink")
-  .map(x => x.price)
-  .reduce((t, v) => t += v)
-  .toFixed(2);
+let drinkTotal = cart.filter(x=> x.name === "Drink")
+                     .map(x=> x.price)
+                     .reduce((t,v) => t + v)
+                     .toFixed(2); 
 
-console.log(Total Drink Cost $${drinkTotal}); // Total Drink Cost $14.13
+console.log(`Total Drink Cost $${drinkTotal}`); // Total Drink Cost $14.13
 ```
 
 ## Pipelines
