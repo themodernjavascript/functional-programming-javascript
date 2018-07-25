@@ -114,6 +114,8 @@ const weightsInPounds = [5, 15.4, 9.8, 110];
 const weightsInKg = weightsInPounds.map(poundsToKg); // 2.27kg, 7.00kg, 4.46kg, 50.01kg
 ```
 
+<a href="https://codepen.io/Bunlong/pen/rrwmWR" target="_blank">Edit on Codepen</a>
+
 ## Array Manipulation Functions
 
 Array Functions are the gateway to functional programming in JavaScript. These functions make short work of most imperative programming routines that work on arrays and collections.
