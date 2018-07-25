@@ -197,3 +197,12 @@ appDiv.innerHTML = `
 <p>reverse: ${JSON.stringify(reverseResult)}</p>
 <p>sort: ${JSON.stringify(sortResult)}</p>`;
 ```
+
+## Method Chaining
+
+Method chains allow a series of functions to operate in succession to reach a final result. Method chains allow function composition similar to a pipeline.
+
+For example:
+
+```javascript
+```
