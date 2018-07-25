@@ -205,4 +205,15 @@ Method chains allow a series of functions to operate in succession to reach a fi
 For example:
 
 ```javascript
+let cart = [
+  {name: "Drink", price: 3.12},
+  {name: "Steak", price: 45.15},
+  {name: "Drink", price: 11.01}
+];
+
+let DrinkTotal = cart.filter(x => x.name === "Drink")
+  .map(x => x.price)
+  .reduce((t, v) => t += v)
+  .toFixed(2);
+console.log(Total Drink Cost $${drinkTotal}); // Total Drink Cost $14.13
 ```
