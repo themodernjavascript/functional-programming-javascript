@@ -9,16 +9,16 @@ Arrow functions create a concise expression that encapsulates a small piece of f
 For example:
 
 ```javascript
-// const multiply = function(x,y) {
-//   return x * y;
-// }
+//  const multiply = function(x, y) {
+//    return x * y;
+//  }
 
 // Can be rewritten as:
 // const multiply = (x, y) => { return x * y };
 
 // Since the function is a single expression return and braces are not needed:
 const multiply = (x, y) => x * y;
-console.log(multiply(5,10)) //50
+console.log(multiply(5,10)) // 50
 ```
 
 <a href="https://codepen.io/Bunlong/pen/QBgdJb" target="_blank">Edit on Codepen</a>
@@ -46,11 +46,20 @@ For example:
 Statement
 
 ```javascript
-
+const getSalutation = function(hour) {
+  var salutation; // temp value
+  if (hour < 12) {
+    salutation = "Good Morning";
+  } else {
+    salutation = "Good Afternoon"
+  }
+  return salutation; // mutated value
+}
 ```
 
 Expression
 
 ```javascript
-
+const getSalutation = (hour) => hour < 12 ? "Good Morning" : "Good Afternoon";
+console.log(getSalutation(10)); // Good Morning
 ```
