@@ -67,3 +67,5 @@ Expression
 const getSalutation = (hour) => hour < 12 ? "Good Morning" : "Good Afternoon";
 console.log(getSalutation(10)); // Good Morning
 ```
+
+<a href="https://codepen.io/Bunlong/pen/mjwWeY" target="_blank">Edit on Codepen</a>
