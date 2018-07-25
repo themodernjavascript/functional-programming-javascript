@@ -48,11 +48,13 @@ Statement
 ```javascript
 const getSalutation = function(hour) {
   var salutation; // temp value
+  
   if (hour < 12) {
     salutation = "Good Morning";
   } else {
     salutation = "Good Afternoon"
   }
+  
   return salutation; // mutated value
 }
 ```
