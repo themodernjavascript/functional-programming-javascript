@@ -93,3 +93,23 @@ console.log(twoByTwo); // [[a, b], [b, c], [c, d], [d, e], [e, f], [f, g]]
 ```
 
 <a href="https://codepen.io/Bunlong/pen/JBJWRa" target="_blank">Edit on Codepen</a>
+
+## Currying
+
+Currying allows a function with multiple arguments to be translated into a sequence of functions. Curried functions can be tailored to match the signature of another function.
+
+```javascript
+const convertUnits = (toUnit, factor, offset = 0) => input => ((offset + input) * factor).toFixed(2).concat(toUnit);
+const milesToKm = convertUnits('km', 1.60936, 0);
+const poundsToKg = convertUnits('kg', 0.45460, 0);
+const farenheitToCelsius = convertUnits('degrees C', 0.5556, -32);
+milesToKm(10); // "16.09 km"
+poundsToKg(2.5); // "1.14 kg"
+farenheitToCelsius(98); // "36.67 degrees C"
+
+const weightsInPounds = [5, 15.4, 9.8, 110];
+// without currying
+// const weightsInKg = weightsInPounds.map(x => convertUnits('kg', 0.45460, 0)(x));
+// with currying
+const weightsInKg = weightsInPounds.map(poundsToKg); // 2.27kg, 7.00kg, 4.46kg, 50.01kg
+```
