@@ -163,6 +163,54 @@ function countUp(n) {
 countUp(1);
 ```
 
+## Anonymous Functions
+
+Anonymous function is the function that was declared without any named identifier to refer to it.
+
+For example:
+
+```javascript
+// Normal function
+function sayHi() {
+  alert('Hello world!');
+}
+sayHi();
+
+// Anonymous function assigned to sayHi variable
+var sayHi = function() { 
+  alert('Hello World!');
+}
+
+// Use as an argument to other functions
+setTimeout(function() {
+  console.log('Hello World!');
+}, 1000);
+
+// Use as a closure
+(function() {
+  alert('Hello World!');
+})();
+
+// Use as a closure with parameters
+(function(msg) {
+  alert(msg);
+}('Hello World!'));
+
+// An anonymous function can refer to itself via arguments.callee local variable, useful for recursive anonymous functions
+console.log(
+  (function(n) {
+    return (1 < n) ? arguments.callee(n - 1) + n : 1;
+  })(10)
+);
+
+// Instead of using arguments.callee, you can use named function expression instead
+console.log(
+  (function sum(n) {
+    return (n <= 1) ? 1 : sum(n-1) + n
+  })(10)
+);
+```
+
 ## Currying
 
 Currying allows a function with multiple arguments to be translated into a sequence of functions. Curried functions can be tailored to match the signature of another function.
