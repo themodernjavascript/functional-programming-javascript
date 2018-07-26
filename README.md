@@ -94,6 +94,58 @@ console.log(twoByTwo); // [[a, b], [b, c], [c, d], [d, e], [e, f], [f, g]]
 
 <a href="https://codepen.io/Bunlong/pen/JBJWRa" target="_blank">Edit on Codepen</a>
 
+## Pure Functions
+
+A function that given the same input, will always return the same output. A pure function produces no side effects.
+
+Note: Side effects may include:
+
+* changing the file system
+* inserting a record into a database
+* making an http call
+* mutations
+* printing to the screen / logging
+* obtaining user input
+* querying the DOM
+* accessing system state
+
+```javascript
+var xs = [1, 2, 3, 4, 5];
+
+// ==== pure ====
+xs.slice(0, 3);
+//=> [1, 2, 3]
+
+xs.slice(0, 3);
+//=> [1, 2, 3]
+
+xs.slice(0, 3);
+//=> [1, 2, 3]
+
+// ==== pure ====
+xs.splice(0, 3);
+//=> [1, 2, 3]
+
+xs.splice(0, 3);
+//=> [4, 5]
+
+xs.splice(0, 3);
+//=> []
+
+// pure
+var checkAge = function(age) {
+  var minimum = 21;
+  return age >= minimum;
+};
+
+// impure
+var minimum = 21;
+
+var checkAge = function(age) {
+  return age >= minimum;
+};
+```
+
 ## Currying
 
 Currying allows a function with multiple arguments to be translated into a sequence of functions. Curried functions can be tailored to match the signature of another function.
