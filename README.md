@@ -109,6 +109,8 @@ Note: Side effects may include:
 * querying the DOM
 * accessing system state
 
+For example:
+
 ```javascript
 var xs = [1, 2, 3, 4, 5];
 
