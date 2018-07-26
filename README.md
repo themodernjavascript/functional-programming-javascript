@@ -148,6 +148,21 @@ var checkAge = function(age) {
 };
 ```
 
+## Recursion
+
+Recursion is the ability to call a function from within itself.
+
+For example:
+
+```javascript
+function countUp(n) {
+  console.log(n);
+  if(n < 10) countUp(n+1);
+}
+
+countUp(1);
+```
+
 ## Currying
 
 Currying allows a function with multiple arguments to be translated into a sequence of functions. Curried functions can be tailored to match the signature of another function.
