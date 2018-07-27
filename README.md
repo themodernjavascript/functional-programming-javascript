@@ -1,6 +1,6 @@
 # Functional Programming Javascript
 
-Functional programming is a style that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data.
+Functional programming is a way of writing clearner code through clever way of mutating, combinding, and using functions.
 
 ## Arrow Functions (Fat Arrows)
 
