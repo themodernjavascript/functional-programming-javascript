@@ -23,6 +23,16 @@ console.log(multiply(5,10)) // 50
 
 <a href="https://codepen.io/Bunlong/pen/QBgdJb" target="_blank">Edit on Codepen</a>
 
+## Closure
+
+Clousure is the functions that have access to the parent scope, even when the parent function has closed.
+
+For every closure there are 3 scopes: 
+
+* Local Scope ( Own scope) 
+* Outer Functions Scope 
+* Global Scope.
+
 ## Function Delegates
 
 Function delegates encapsulate a method allowing functions to be composed or passed as data.
