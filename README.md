@@ -173,6 +173,8 @@ function countUp(n) {
 countUp(1);
 ```
 
+<a href="https://codepen.io/Bunlong/pen/zLPBPO" target="_blank">Edit on Codepen</a>
+
 ## Anonymous Functions
 
 Anonymous function is the function that was declared without any named identifier to refer to it.
