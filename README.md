@@ -158,6 +158,8 @@ var checkAge = function(age) {
 };
 ```
 
+<a href="https://codepen.io/Bunlong/pen/OwOXzz" target="_blank">Edit on Codepen</a>
+
 ## Recursion
 
 Recursion is the ability to call a function from within itself.
