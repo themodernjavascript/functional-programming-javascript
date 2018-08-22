@@ -26,12 +26,20 @@ console.log(multiply(5,10)) // 50
 ## Scope
 
 * Global scope
-* Local Scope
+* Local scope
 * Function scope
 * Block scope
-* Function hoisting and scopes
-* Functions do not have access to each other's scopes
-* Nested scopes
+* Function hoisting and scope
+* Functions do not have access to each other's scope
+* Nested scope
+
+**Global scope**
+
+If a variable is declared outside all functions or curly braces `({})`, it is said to be defined in the global scope.
+
+```javascript
+const globalVariable = 'some value';
+```
 
 ## Closure
 
@@ -39,9 +47,9 @@ Clousure is the functions that have access to the parent scope, even when the pa
 
 For every closure there are 3 scopes: 
 
-* Local Scope ( Own scope) 
-* Outer Functions Scope 
-* Global Scope.
+* Local scope ( Own scope) 
+* Outer functions scope 
+* Global scope
 
 ## Function Delegates
 
