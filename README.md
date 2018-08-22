@@ -23,6 +23,16 @@ console.log(multiply(5,10)) // 50
 
 <a href="https://codepen.io/Bunlong/pen/QBgdJb" target="_blank">Edit on Codepen</a>
 
+## Scope
+
+* Global scope
+* Local Scope
+* Function scope
+* Block scope
+* Function hoisting and scopes
+* Functions do not have access to each other's scopes
+* Nested scopes
+
 ## Closure
 
 Clousure is the functions that have access to the parent scope, even when the parent function has closed.
